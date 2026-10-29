@@ -1,0 +1,125 @@
+/* CTA Section Styling */
+.cta {
+  padding: 100px 24px;
+  background: radial-gradient(circle at 50% 50%, rgba(0, 229, 255, 0.1) 0%, transparent 60%),
+              #08101f;
+  position: relative;
+  overflow: hidden;
+}
+
+.cta-container {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.cta-content {
+  background: linear-gradient(135deg, #111827 0%, #0d1527 100%);
+  border: 1px solid rgba(0, 229, 255, 0.3);
+  border-radius: 24px;
+  padding: 60px 40px;
+  text-align: center;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.5),
+              0 0 30px rgba(0, 229, 255, 0.15);
+  position: relative;
+}
+
+.cta-icon-wrap {
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  background: rgba(0, 229, 255, 0.1);
+  border: 1px solid rgba(0, 229, 255, 0.3);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 24px;
+}
+
+.cta-shield {
+  color: #00e5ff;
+  font-size: 28px;
+}
+
+.cta h2 {
+  color: #ffffff;
+  font-size: 36px;
+  font-weight: 800;
+  line-height: 1.25;
+  margin-bottom: 16px;
+}
+
+.cta p {
+  color: #94a3b8;
+  font-size: 16px;
+  line-height: 1.7;
+  max-width: 640px;
+  margin: 0 auto 36px;
+}
+
+.cta-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+.cta-btn.primary {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 14px 28px;
+  background: #00e5ff;
+  color: #08101f;
+  border-radius: 10px;
+  font-size: 15px;
+  font-weight: 700;
+  text-decoration: none;
+  box-shadow: 0 0 20px rgba(0, 229, 255, 0.3);
+  transition: all 0.25s ease;
+}
+
+.cta-btn.primary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 0 30px rgba(0, 229, 255, 0.5);
+}
+
+.cta-btn.secondary {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 13px 26px;
+  background: transparent;
+  color: #f1f5f9;
+  border: 1.5px solid #334155;
+  border-radius: 10px;
+  font-size: 15px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: all 0.25s ease;
+}
+
+.cta-btn.secondary:hover {
+  border-color: #00e5ff;
+  color: #00e5ff;
+  background: rgba(0, 229, 255, 0.05);
+  transform: translateY(-2px);
+}
+
+@media (max-width: 640px) {
+  .cta-content {
+    padding: 40px 20px;
+  }
+
+  .cta h2 {
+    font-size: 28px;
+  }
+
+  .cta-buttons {
+    flex-direction: column;
+  }
+
+  .cta-btn.primary, .cta-btn.secondary {
+    width: 100%;
+    justify-content: center;
+  }
+}

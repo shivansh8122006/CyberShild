@@ -1,0 +1,352 @@
+/* CyberShield Admin Layout Styles */
+.admin-wrapper {
+  display: flex;
+  min-height: 100vh;
+  background-color: #060d19;
+  color: #f1f5f9;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+}
+
+/* Sidebar */
+.admin-sidebar {
+  width: 260px;
+  background: #0a1120;
+  border-right: 1px solid #1a2638;
+  display: flex;
+  flex-direction: column;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 100;
+  transition: transform 0.3s ease;
+}
+
+.admin-sidebar-header {
+  padding: 24px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px solid #1a2638;
+}
+
+.admin-brand {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  text-decoration: none;
+}
+
+.admin-logo-badge {
+  width: 38px;
+  height: 38px;
+  border-radius: 10px;
+  background: rgba(0, 229, 255, 0.12);
+  border: 1px solid rgba(0, 229, 255, 0.4);
+  color: #00e5ff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 18px;
+  box-shadow: 0 0 15px rgba(0, 229, 255, 0.2);
+}
+
+.admin-brand-title {
+  display: block;
+  font-size: 18px;
+  font-weight: 800;
+  color: #ffffff;
+  letter-spacing: -0.3px;
+}
+
+.admin-brand-sub {
+  display: block;
+  font-size: 10px;
+  font-weight: 700;
+  color: #00e5ff;
+  letter-spacing: 1.5px;
+}
+
+.admin-sidebar-close {
+  display: none;
+  background: transparent;
+  border: none;
+  color: #94a3b8;
+  font-size: 18px;
+  cursor: pointer;
+}
+
+.admin-nav-menu {
+  padding: 24px 14px;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  overflow-y: auto;
+}
+
+.nav-group-label {
+  font-size: 11px;
+  font-weight: 700;
+  color: #475569;
+  letter-spacing: 1.2px;
+  padding: 10px 14px 4px;
+  display: block;
+}
+
+.admin-nav-link {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 12px 14px;
+  border-radius: 10px;
+  color: #94a3b8;
+  font-size: 14px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: all 0.2s ease;
+  border: 1px solid transparent;
+}
+
+.admin-nav-link .nav-icon {
+  font-size: 16px;
+  color: #64748b;
+  transition: color 0.2s ease;
+}
+
+.admin-nav-link:hover {
+  background: #111a2e;
+  color: #00e5ff;
+  border-color: rgba(0, 229, 255, 0.15);
+}
+
+.admin-nav-link:hover .nav-icon {
+  color: #00e5ff;
+}
+
+.admin-nav-link.active {
+  background: rgba(0, 229, 255, 0.12);
+  color: #00e5ff;
+  border-color: rgba(0, 229, 255, 0.35);
+  box-shadow: 0 0 15px rgba(0, 229, 255, 0.1);
+}
+
+.admin-nav-link.active .nav-icon {
+  color: #00e5ff;
+}
+
+.admin-nav-link.external-link {
+  margin-top: 10px;
+  border: 1px dashed #1e293b;
+  color: #38bdf8;
+}
+
+.admin-nav-link.external-link:hover {
+  background: rgba(56, 189, 248, 0.1);
+  border-color: #38bdf8;
+}
+
+.admin-sidebar-footer {
+  padding: 16px;
+  border-top: 1px solid #1a2638;
+  background: #080f1c;
+}
+
+.admin-user-card {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 12px;
+}
+
+.admin-avatar {
+  width: 36px;
+  height: 36px;
+  border-radius: 8px;
+  background: #1e293b;
+  color: #00e5ff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 16px;
+}
+
+.admin-user-info {
+  display: flex;
+  flex-direction: column;
+}
+
+.admin-user-name {
+  font-size: 13px;
+  font-weight: 700;
+  color: #f1f5f9;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 140px;
+}
+
+.admin-user-role {
+  font-size: 10px;
+  font-weight: 700;
+  color: #10b981;
+  letter-spacing: 0.8px;
+}
+
+.admin-logout-btn {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 10px;
+  border-radius: 8px;
+  background: rgba(239, 68, 68, 0.1);
+  border: 1px solid rgba(239, 68, 68, 0.3);
+  color: #f87171;
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.admin-logout-btn:hover {
+  background: rgba(239, 68, 68, 0.2);
+  border-color: #ef4444;
+  color: #ffffff;
+}
+
+/* Main Content Area */
+.admin-main {
+  flex: 1;
+  margin-left: 260px;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+/* Top Header */
+.admin-header {
+  height: 70px;
+  background: #0a1120;
+  border-bottom: 1px solid #1a2638;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 30px;
+  position: sticky;
+  top: 0;
+  z-index: 50;
+}
+
+.admin-header-left {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.admin-menu-toggle {
+  display: none;
+  background: transparent;
+  border: 1px solid #1e293b;
+  color: #f1f5f9;
+  padding: 8px 12px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.admin-breadcrumbs {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 14px;
+}
+
+.breadcrumb-root {
+  color: #64748b;
+  font-weight: 600;
+}
+
+.breadcrumb-separator {
+  color: #334155;
+}
+
+.breadcrumb-current {
+  color: #00e5ff;
+  font-weight: 700;
+}
+
+.admin-header-right {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.system-status-indicator {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background: rgba(16, 185, 129, 0.1);
+  border: 1px solid rgba(16, 185, 129, 0.3);
+  padding: 6px 12px;
+  border-radius: 999px;
+  color: #10b981;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.pulse-dot {
+  font-size: 8px;
+  animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+  0% { opacity: 1; transform: scale(1); }
+  50% { opacity: 0.4; transform: scale(1.3); }
+  100% { opacity: 1; transform: scale(1); }
+}
+
+.admin-live-clock {
+  font-family: monospace;
+  font-size: 14px;
+  color: #94a3b8;
+  background: #060d19;
+  padding: 6px 12px;
+  border-radius: 6px;
+  border: 1px solid #1a2638;
+}
+
+.admin-content-body {
+  padding: 30px;
+  flex: 1;
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 900px) {
+  .admin-sidebar {
+    transform: translateX(-100%);
+  }
+  .admin-sidebar.open {
+    transform: translateX(0);
+  }
+  .admin-sidebar-close {
+    display: block;
+  }
+  .admin-main {
+    margin-left: 0;
+  }
+  .admin-menu-toggle {
+    display: block;
+  }
+  .admin-backdrop {
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.7);
+    backdrop-filter: blur(4px);
+    z-index: 90;
+  }
+  .admin-content-body {
+    padding: 20px 16px;
+  }
+}

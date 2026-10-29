@@ -1,0 +1,256 @@
+/* Navbar Styling */
+.navbar {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  background-color: rgba(11, 17, 32, 0.95);
+  backdrop-filter: blur(12px);
+  border-bottom: 1px solid #1e293b;
+  width: 100%;
+}
+
+.nav-container {
+  max-width: 1240px;
+  margin: 0 auto;
+  padding: 16px 24px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* Logo */
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.logo-icon-wrap {
+  width: 40px;
+  height: 40px;
+  border-radius: 10px;
+  background: linear-gradient(135deg, rgba(0, 229, 255, 0.2), rgba(0, 229, 255, 0.05));
+  border: 1px solid rgba(0, 229, 255, 0.4);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 0 15px rgba(0, 229, 255, 0.2);
+}
+
+.logo-icon {
+  color: #00e5ff;
+  font-size: 22px;
+}
+
+.logo-text {
+  font-size: 24px;
+  font-weight: 800;
+  color: #ffffff;
+  letter-spacing: -0.5px;
+}
+
+.logo-highlight {
+  color: #00e5ff;
+}
+
+/* Nav Menu Desktop */
+.nav-menu {
+  display: flex;
+  align-items: center;
+  gap: 32px;
+}
+
+.nav-links {
+  display: flex;
+  list-style: none;
+  gap: 24px;
+  align-items: center;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-links a {
+  color: #94a3b8;
+  text-decoration: none;
+  font-size: 15px;
+  font-weight: 500;
+  transition: all 0.2s ease;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 6px 12px;
+  border-radius: 8px;
+}
+
+.nav-links a:hover {
+  color: #ffffff;
+  background-color: rgba(255, 255, 255, 0.05);
+}
+
+.nav-links a.active {
+  color: #00e5ff;
+  background-color: rgba(0, 229, 255, 0.1);
+  font-weight: 600;
+}
+
+.nav-icon-inline {
+  font-size: 13px;
+}
+
+/* Auth Buttons */
+.auth-buttons {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.login-btn {
+  padding: 8px 18px;
+  border: 1px solid #334155;
+  border-radius: 8px;
+  background: transparent;
+  color: #f1f5f9;
+  font-size: 14px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: all 0.2s ease;
+}
+
+.login-btn:hover {
+  border-color: #00e5ff;
+  color: #00e5ff;
+  background: rgba(0, 229, 255, 0.05);
+}
+
+.register-btn {
+  padding: 8px 18px;
+  border: none;
+  border-radius: 8px;
+  background: #00e5ff;
+  color: #08101f;
+  font-size: 14px;
+  font-weight: 700;
+  text-decoration: none;
+  box-shadow: 0 0 15px rgba(0, 229, 255, 0.25);
+  transition: all 0.2s ease;
+}
+
+.register-btn:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 0 20px rgba(0, 229, 255, 0.45);
+}
+
+/* Logged-in User Controls */
+.user-nav-actions {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.dashboard-nav-btn {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background: rgba(0, 229, 255, 0.12);
+  border: 1px solid rgba(0, 229, 255, 0.35);
+  color: #00e5ff;
+  padding: 8px 16px;
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: all 0.2s ease;
+}
+
+.dashboard-nav-btn:hover {
+  background: rgba(0, 229, 255, 0.22);
+  transform: translateY(-1px);
+}
+
+.logout-nav-btn {
+  background: #1e293b;
+  border: 1px solid #334155;
+  color: #94a3b8;
+  padding: 8px 12px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 14px;
+  transition: all 0.2s ease;
+}
+
+.logout-nav-btn:hover {
+  background: #ef4444;
+  border-color: #ef4444;
+  color: #ffffff;
+}
+
+/* Mobile Hamburger Toggle */
+.mobile-toggle {
+  display: none;
+  background: transparent;
+  border: none;
+  color: #f1f5f9;
+  font-size: 22px;
+  cursor: pointer;
+  padding: 4px;
+}
+
+/* Responsive Mobile Rules */
+@media (max-width: 960px) {
+  .mobile-toggle {
+    display: block;
+  }
+
+  .nav-menu {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background-color: #0b1120;
+    border-bottom: 1px solid #1e293b;
+    flex-direction: column;
+    padding: 24px;
+    gap: 20px;
+    align-items: flex-start;
+    display: none;
+  }
+
+  .nav-menu.open {
+    display: flex;
+  }
+
+  .nav-links {
+    flex-direction: column;
+    width: 100%;
+    gap: 10px;
+  }
+
+  .nav-links li {
+    width: 100%;
+  }
+
+  .nav-links a {
+    width: 100%;
+    padding: 10px 14px;
+    font-size: 16px;
+  }
+
+  .auth-buttons {
+    width: 100%;
+    flex-direction: column;
+    gap: 12px;
+    padding-top: 12px;
+    border-top: 1px solid #1e293b;
+  }
+
+  .login-btn,
+  .register-btn,
+  .dashboard-nav-btn {
+    width: 100%;
+    text-align: center;
+    justify-content: center;
+    padding: 12px;
+  }
+}
